@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/first-task?useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL57InnoDBDialect
+
+
+server:
+  port: 9099
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+#        host: junior.balinasoft.com
+
+project:
+  url: http://localhost:9099
+  security:
+    access-token:
+      length: 64
+      symbols: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+      max-count: 10
+  image-folder: /first-task/images
+
+logging:
+  path: /first-task/log
